@@ -51,36 +51,36 @@
 
 
 # lec 26 pizza order app
+print("Welcome to python pizza deliveries")
 
-print("Welcome to python pizza delieveries")
+size = input("What size pizza do you want? S, M, or L: ")
+pepperoni = input("Do you want pepperoni? Y or N: ")
+extra_cheese = input("Do you want extra cheese? Y or N: ")
 
-size = input("what size pizza do u want ? S , M , L ?")
-pepperoni = input("do u want pepperoni on your pizza ? Y or N")
-extra_cheese = input("do u want extra cheese ? Y or N")
 bill = 0
 
-if(size == "S"):
-
+# Pizza size price
+if size == "S":
     bill += 15
-
-  elif(size == "M"):
+elif size == "M":
     bill += 20
-  elif (size == "L"):
+elif size == "L":
     bill += 25
-
- if(pepperoni == "Y" ):
-
- if(size == "S"):
-    bill += 2
- else:
-     bill += 3
-
-if (extra_cheese == "Y"):
-
-     bill += 1
 else:
-    print("you havent chose anyhing , please pick a size")
+    print("You haven't chosen a valid size")
 
-print(f"your total is ${bill}")
+# Pepperoni price
+if pepperoni == "Y":
+    if size == "S":
+        bill += 2
+    else:
+        bill += 3
+
+# Extra cheese price
+if extra_cheese == "Y":
+    bill += 1
+
+print(f"Your total bill is ${bill}")
+
 
 
