@@ -17,34 +17,70 @@
 # else:
 #     print("odd")
 
-#sec 24 nested if statements
+#sec 24 & 25 nested if statements
 
-print("Welcome to the rollercoaster!")
+# print("Welcome to the rollercoaster!")
+#
+# height = int(input("What's your height in cm? "))
+# bill = 0
+#
+# if height >= 120:
+#     print("You can ride the rollercoaster!")
+#
+#     age = int(input("What's your age? "))
+#
+#     if age <= 12:
+#         bill = 5
+#         print("You have to pay $5")
+#     elif age <= 18:
+#         bill = 7
+#         print("You have to pay $7")
+#     else:
+#         bill = 12
+#         print("You have to pay $12")
+#
+#     wants_photo = input("Would you like the photo for extra payment? (y/n) ")
+#     if wants_photo == "y":
+#         bill += 3
+#
+#     print(f"Your final bill is ${bill}")
+#
+# else:
+#     print("You have to grow taller before you can ride.")
+#
 
-height = int(input("What's your height in cm? "))
+
+# lec 26 pizza order app
+
+print("Welcome to python pizza delieveries")
+
+size = input("what size pizza do u want ? S , M , L ?")
+pepperoni = input("do u want pepperoni on your pizza ? Y or N")
+extra_cheese = input("do u want extra cheese ? Y or N")
 bill = 0
 
-if height >= 120:
-    print("You can ride the rollercoaster!")
+if(size == "S"):
 
-    age = int(input("What's your age? "))
+    bill += 15
 
-    if age <= 12:
-        bill = 5
-        print("You have to pay $5")
-    elif age <= 18:
-        bill = 7
-        print("You have to pay $7")
-    else:
-        bill = 12
-        print("You have to pay $12")
+  elif(size == "M"):
+    bill += 20
+  elif (size == "L"):
+    bill += 25
 
-    wants_photo = input("Would you like the photo for extra payment? (y/n) ")
-    if wants_photo == "y":
-        bill += 3
+ if(pepperoni == "Y" ):
 
-    print(f"Your final bill is ${bill}")
+ if(size == "S"):
+    bill += 2
+ else:
+     bill += 3
 
+if (extra_cheese == "Y"):
+
+     bill += 1
 else:
-    print("You have to grow taller before you can ride.")
+    print("you havent chose anyhing , please pick a size")
+
+print(f"your total is ${bill}")
+
 
